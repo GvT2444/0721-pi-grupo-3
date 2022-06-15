@@ -6,5 +6,6 @@ const Controller = require('../controllers/Controller');
 
 router.get('/', Controller.listar);
 router.get('/login',Controller.mostralogin);
+router.get('/Cadastrar', Controller.mostrarcadastro);
 
 module.exports = router;

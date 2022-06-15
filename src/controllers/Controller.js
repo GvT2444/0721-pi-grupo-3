@@ -6,7 +6,10 @@ const Controller = {
     
     mostralogin: (req, res) => {
     res.render('../src/views/login.ejs', { erro: 0 });
-}
+},
+    mostrarcadastro: (req, res) => {
+        res.render('../src/views/cadastro.ejs',{erro:0});
+    }
 }
 
 module.exports = Controller;
