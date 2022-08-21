@@ -8,4 +8,6 @@ router.get('/home', Controller.home);
 
 router.get('/login',Controller.mostralogin);
 
+router.get('cadastro', Controller.mostracadastro);
+
 module.exports = router;
