@@ -3,12 +3,14 @@ const Controller = {
         res.render('home.ejs')
     },
     mostralogin: (req, res) => {
-        res.render('login.ejs', { erro: 0 });
+        res.render('login.ejs')
     },
     mostracadastro: (req, res) => {
         res.render('cadastro.ejs')
     },
-    
+    listagemp: (req, res) => {
+        res.render('listagemP.ejs')
+    },
 }
 
 

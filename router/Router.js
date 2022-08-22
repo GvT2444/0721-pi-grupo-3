@@ -8,6 +8,8 @@ router.get('/home', Controller.home);
 
 router.get('/login',Controller.mostralogin);
 
-router.get('cadastro', Controller.mostracadastro);
+router.get('/cadastro', Controller.mostracadastro);
+
+router.get('/listagem',Controller.listagemp);
 
 module.exports = router;

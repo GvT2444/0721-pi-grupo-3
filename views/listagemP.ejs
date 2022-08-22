@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/listagem.css">
     <title>Document</title>
 </head>
 
-    <body>
-        <%-include("partes/header")%>
-        <main>
+<body>
+    <%-include("partes/header")%>
+    <a class="produtobuscado">
+        <input type="text" name="produto buscado">
+    </a>
+    <main>
+            
             <div class="divcolor">
-                <div><img src="img\depositodemadeira2.jpg" alt="" /></div>
+                <div><img src="img\depositodemadeira2.jpg"></div>
                 <div>
                     <h4>Nome</h4>
                 </div>
@@ -63,7 +68,12 @@
                     <h4>add</h4>
                 </div>
             </div>
-        </main>
-    </body>
+    </main>
+    <footer>
+        <div>
+            
+        </div>
+    </footer>
+</body>
 
-    </html>
+</html>
