@@ -29,20 +29,21 @@ h1 {
     line-height: 48px;
     display: flex;
     align-items: flex-end;
-
     color: #FFFFFF;
-
 }
 
-.login {
-    box-sizing: border-box;
+.guarda {
+    background-color:  #000000 transparent;
+}
 
+label {
+    box-sizing: border-box;
+    background-color: gray transparent;
     position: absolute;
     width: 281px;
     height: 318px;
     left: 258px;
     top: 81px;
-
     border-radius: 7px;
 }
 
@@ -160,7 +161,7 @@ input {
     outline: none;
     text-decoration: none;
     color: #000000;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 button {
