@@ -1,166 +1,107 @@
-html {
-<<<<<<< HEAD
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, #025700 7.58%, #9eb09d 100%);
-}
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-header {
-  width: 100%;
-  height: 75px;
-  padding: 0px;
-  margin: 0;
-  border-bottom: solid 5px white;
-  justify-content: space-evenly;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-}
-main {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  
-}
-.bolinha > button {
-  width: 75px;
-  height: 27px;
-  border-radius: 50px;
-}
-.buscar {
-  width: 170px;
-  height: 27px;
-}
-.divcolor {
-  background-color: #d9d9d9;
-  padding: 30px;
-  margin: 50px;
-  border-radius: 10px;
-  
-}
-img{
-  width: 150px;
-  height: 50px;
-  border-radius: 10px;
-}
-.divrow{
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-h1{
-  position: absolute;
-  left:10px
-}
- 
-=======
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, #025700 7.58%, #9eb09d 100%);
+.slider {
+    margin: 0 auto;
+    width: 950px;
+    height: 400px;
+    overflow: hidden;
+    padding-top: 25px;
+    position: relative;
+    z-index: -1;
 }
 
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Exo 2', sans-serif;
-    background-image: none;
-}
-
-.container {
-    width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-header {
-    width: 100%;
-    height: 75px;
-    padding: 0px;
-    margin: 0;
-    border-bottom: solid 5px white;
-}
-header > div {
+.slides {
+    width: 400%;
+    height: 400px;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    
 }
 
-main {
-    width: 50%;
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 3s;
+}
+
+.slide img {
+    width: 100%;
+}
+
+
+.manual-navigation {
+    position: absolute;
+    width: 830px;
+    margin-top: -70px;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
 }
 
-input {
-    background: #fff;
-    padding: 0;
-    border: 0;
-    outline: none;
-    text-decoration: none;
-    color: #000000;
-    font-size: 20px;
-    border-radius: 8px;
+.manual-btn {
+    border: 2px solid #FFFFFF;
+    padding: 4px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 1s;
 }
 
-header button {
-    background: #fff;
-    border: 0;
-    outline: none;
-    text-decoration: none;
-    color: #000000;
-    font-size: 15px;
-    border-radius: 8px;
+.manual-btn:not(:last-child) {
+    margin-right: 50px;
 }
 
-img {
-    width: 245px;
-    height: 70px;
-    border-radius: 10px;
+.manual-btn:hover {
+    background-color: #FFFFFF;
 }
 
-
-.bolinha {
-    width: 28px;
-    height: 20px;
+#radio1:checked~.first {
+    margin-left: 0;
 }
 
-.buscar {
-    width: 377px;
-    height: 26px;
+#radio2:checked~.first {
+    margin-left: -25%;
 }
 
-.barbusca {
-    width: 400px;
-    height: 26px;
+#radio3:checked~.first {
+    margin-left: -50%;
+}
+
+#radio4:checked~.first {
+    margin-left: -75%;
+}
+
+.navigation-auto {
+    border: 2px solid #009DAC;
     padding: 5px;
-    font-size: 14px;
-}
-
-.divcolor {
-    background-color: #d9d9d9;
-    padding: 30px;
-    margin: 17px;
     border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
 }
 
-.divrow {
+.navigation-auto {
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
 }
->>>>>>> a9e5b223ec91da1c68772b4bc4b18e2592566ff0
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 20px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background-color: #FFFFFF;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background-color: #FFFFFF;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background-color: #FFFFFF;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background-color: #FFFFFF;
+}

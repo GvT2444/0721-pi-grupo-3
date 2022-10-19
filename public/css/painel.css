@@ -1,0 +1,31 @@
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+.usuario{
+    width: 200px;
+    height: 210px;
+    border: 1px solid black;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: whitesmoke;
+}
+
+.usuario img{
+    width: 100px;
+    height: 100px;
+}
+
+.opcoes{
+    margin: 50px;
+    color: whitesmoke;
+}
+
+section{
+    border-right: 1px solid #FFFFFF;
+}
+
