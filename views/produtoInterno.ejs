@@ -1,7 +1,39 @@
-<%-iniclude("partes/head")%>
+<%- include("partes/head") %>
 
     <body>
-        <%-iniclude("partes/header")%>
+        <link rel="stylesheet" href="css/produto.css">
+        <link rel="stylesheet" href="css/geral.css">
+        <%- include("partes/header") %>
+            <main>
+                <div class="produtointerno">
+                <div class="produtofotos">
+                    <ul>
+                        <li><img src="img/madeira2.jpg" alt=""></li>
+                        <li><img src="img/madeira2.jpg" alt=""></li>
+                        <li><img src="img/madeira2.jpg" alt=""></li>
+                        <li><img src="img/madeira2.jpg" alt=""></li>
+                        <li><img src="img/madeira2.jpg" alt=""></li>
+                        <li><img src="img/madeira2.jpg" alt=""></li>
+                    </ul>
+                    <img class="imgproduto" src="img/madeira2.jpg" alt="">
+                </div>
+                <div class="produto">
+                    <div class="descricao">
+                        <h1> Madeira de carvalho</h1>
+                        <p class="preco">R$ 420</p>
+                    </div>
+                    <div class="informacoes">
+                        <h1 class="nomedaloja">Catapimba</h1>
+                          
+                        <form action="produtoInterno.ejs" id="cep">
+                            <label for="cep">Cep</label>
+                            <input class="cep" type="text" id="cep">
+                         </form>
+                        <input class="comprar" type="button" value="comprar">
+                        <input class="adicionar" type="button" value="adicionar ao carrinho">
+                    </div>
+                </div>
+            </div>
+            </main>
+            <%- include("partes/footer") %>
     </body>
-
-</html>

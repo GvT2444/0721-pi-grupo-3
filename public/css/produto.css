@@ -1,0 +1,105 @@
+
+.produtointerno {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 35px;
+    border-radius: 5px;
+    box-shadow:  0 2px 6px -1px rgba(0, 0, 0, 0.16), 0 1px 4px -1px rgba(0, 0, 0, 0.04);
+}
+
+.produtofotos {
+    display: flex;
+    flex-direction: row;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 10px;
+}
+
+li > img {
+    width: 50px;
+    height: 50px;
+}
+
+
+.imgproduto {
+    width: 300px;
+    height: 370px;
+    margin: 25px;
+}
+
+.produto {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+}
+
+.descricao {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: flex-start;
+    margin: 25px;
+}
+
+.preco {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0;
+    
+    
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 5px;
+    margin: 25px;
+    box-shadow: 4px;
+}
+
+.cep {
+    width: 200px;
+    height: 10px;
+    padding: 5px;
+    border: 1px solid #1e1c1c;
+    border-radius: 4px;
+    margin-bottom: 70px;
+}
+
+.comprar {
+    width: 150px;
+    height: 50px;
+    background-color: #df8233;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 60px 30px 0 30px;
+}   
+
+.adicionar {
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    color:  #df8233;
+    border: 1px solid #df8233;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 20px 30px 0 30px;
+}   
+
+h1{
+    font-size: 22px;
+    font-weight: 600;
+    margin: 25px 0 20px 0;
+}
