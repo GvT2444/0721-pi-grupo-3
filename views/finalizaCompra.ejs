@@ -1,29 +1,30 @@
 <%-include("partes/head")%>
 
     <body>
-        <link rel="stylesheet" href="css/finaliza.css">
-        <link rel="stylesheet" href="css/geral.css">
         <%-include("partes/header")%>
-            <div class="produtos">
-                <form>
-                    <div id="titulo">
-                        <span><h3>Produtos</h3></span>
-                        <img src="img/madeira1.jpg" alt="">
-                        <input type="text" name="produto" id="produto">
-                    </div>
- 
-                    <label class="frete ">
-                        <span>frete</span>
-                    </label>
-
-                    <label class="preco total">
-                        <span>total</span>
-                    </label>
-                </form>
-            </div>
-            <div class="formapagamento">
+            <link rel="stylesheet" href="css/finaliza.css">
+            <main>
+                <div class="info">
+                    <span>
+                        <h3>Suas Informações</h3>
+                    </span>
+                    <form>
+                        <h4>rua</h4>
+                        <h4>bairro</h4>
+                        <h4>estado/cidade</h4>
+                        <h4>nome cliente</h4>
+                        <h4>cep</h4>
+                    </form>
+                </div>
+                <div class="pay">
+                    <span>Fomas de Pagamento</span>
+                </div>
+                <div class="pedido">
+                    <h3>Resumo do Pedido</h3>
+                    <button class="continuar">Continuar</button>
+                </div>
                 
-            </div>
-        <button type="submit"> Confirmar Pagamento </button>
+            </main>
     </body>
-</html>
+
+    </html>

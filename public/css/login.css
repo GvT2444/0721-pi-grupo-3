@@ -15,21 +15,12 @@ main {
     box-shadow: 0px 0px 10px white;
 }
 
-h1 {
+a img {
     position: absolute;
-    width: 205px;
-    height: 2px;
-    left: 260px;
-    top: 60px;
-
-    font-family: 'Exo 2', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 60px;
-    line-height: 48px;
-    display: flex;
-    align-items: flex-end;
-    color: #FFFFFF;
+    width: 376px;
+    height: 93px;
+    left: 265px;
+    top: 69px;
 }
 
 .guarda {
@@ -65,12 +56,23 @@ label {
 
 .baremail {
     position: absolute;
-    width: 255px;
-    height: 25px;
-    left: 290px;
-    top: 206px;
-
+    width: 263px;
+    height: 28px;
+    left: 286px;
+    padding: 3px;
+    top: 207px;
     background: #ffffff;
+    border-radius: 25px;
+}
+
+.barsenha {
+    position: absolute;
+    width: 263px;
+    padding: 3px;
+    height: 28px;
+    left: 290px;
+    top: 285px;
+    background: #FFFFFF;
     border-radius: 25px;
 }
 
@@ -90,17 +92,6 @@ label {
     color: #ffffff;
 }
 
-.barsenha {
-    position: absolute;
-    width: 255px;
-    height: 25px;
-    left: 290px;
-    top: 285px;
-
-    border-radius: 25px;
-    background: #FFFFFF;
-}
-
 #esqueceu {
     position: absolute;
     width: 135px;
@@ -109,14 +100,13 @@ label {
     top: 340px;
 
     font-weight: 400;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 15px;
 
     display: flex;
     align-items: center;
 
-
-    color: #000000;
+    color: #ffffff;
 }
 
 .esqueceu {
@@ -126,7 +116,7 @@ label {
     left: 304px;
     top: 324px;
 
-    background: #000000;
+    background: #ffffff;
 
     border-radius: 8px;
 }
@@ -135,7 +125,7 @@ label {
     position: absolute;
     width: 41px;
     height: 21px;
-    left: 480px;
+    left: 467px;
     top: 340px;
     padding: 0;
     border: 0;
@@ -150,23 +140,31 @@ label {
     height: 18px;
     left: 417px;
     top: 325px;
-
     border-radius: 15px;
 }
 
 input {
     background: transparent;
-    padding: 0;
+    padding: 5;
     border: 0;
     outline: none;
     text-decoration: none;
     color: #000000;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 button {
     background-color: #ffffff;
     border: 0;
-    border-radius: 15px;
+    padding: 2PX;
+    border-radius: 23px;
+    width: 80px;
 }
 
+.barEsqueci{
+    background-color: #ffffff;
+    border: 0;
+    padding: 3PX;
+    border-radius: 7px;
+    width: 140px;
+}
