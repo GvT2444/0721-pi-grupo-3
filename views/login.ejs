@@ -1,35 +1,47 @@
-<%-include("partes/head")%>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    <body>
-        <link rel="stylesheet" href="css/eucalipto-foto.jpg.css">
-        <link rel="stylesheet" href="css/login.css">
-        <div class="login">
-            <form action="/login">
-                <div class="guarda">
-                    <label>
-                        <div id="titulo">
-                            <h1>Eucalyptus</h1>
-                        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="imagem/png" href="../img/folha.png" />
+    <title>Eucalyptus</title>
+</head>
 
-                        <label class="baremail">
-                            <span class="email">Email</span>
-                            <input type="text" name="email" id="email" placeholder="Informe seu email">
-                        </label>
+<body>
+    <link rel="stylesheet" href="css/eucalipto-foto.jpg.css">
+    <link rel="stylesheet" href="css/login.css">
+    <div class="login">
+        <form action="/login">
+            <div class="guarda">
+                <label>
+                    <div id="titulo">
+                        <a><img src="img/Eucalyptus.png" alt=""></a>
+                    </div>
 
-                        <label class="barsenha ">
-                            <span class="senha">Senha</span>
-                            <input type="password" name="senha" id="senha" placeholder="Informe seu senha">
-                        </label>
-                        <div id="esqueceu">
-                            <a href="#" style="color: rgb(0, 0, 0)" class="bar esqueci">esqueceu a senha ?</a>
-                        </div>
-                        <div id="entrar">
-                            <button type="submit">Entrar</button>
-                        </div>
+                    <label class="baremail">
+                        <span class="email">Email</span>
+                        <input type="text" name="email" id="email" placeholder="Informe seu email">
                     </label>
-                </div>
-            </form>
-        </div>
-    </body>
 
-    </html>
+                    <label class="barsenha ">
+                        <span class="senha">Senha</span>
+                        <input type="password" name="senha" id="senha" placeholder="Informe seu senha">
+                    </label>
+
+                    <div id="esqueceu">
+                        <a href="#" style="color: rgb(0, 0, 0)" class="barEsqueci">esqueceu a senha ?</a>
+                    </div>
+
+                    <div id="entrar">
+                        <button type="submit">Entrar</button>
+                    </div>
+
+                </label>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,28 +1,38 @@
 <%-include("partes/head")%>
 
     <body>
-        <link rel="stylesheet" href="css/finaliza.css">
-        <link rel="stylesheet" href="css/geral.css">
         <%-include("partes/header")%>
-            <div class="produtos">
-                <form>
-                    <div id="titulo">
-                        <span>Produtos</span>
-                    </div>
+            <link rel="stylesheet" href="css/geral.css">
+            <link rel="stylesheet" href="css/finaliza.css">
+            <main>
+                <div class="info">
+                    <span>
+                        <h2>Suas Informações</h2>
+                    </span>
+                    <form>
+                        <h4>rua</h4>
+                        <h4>bairro</h4>
+                        <h4>estado/cidade</h4>
+                        <h4>nome cliente</h4>
+                        <h4>cep</h4>
+                    </form>
+                </div>
+                <div class="pay">
+                    <span><h2>Fomas de Pagamento</h2></span>
+                    <form>
+                        <a><input type="checkbox" name="Pix" id="">Pix</a>
+                        <a><input type="checkbox" name="Cartao" id="">Cartão</a>
+                        <a><input type="checkbox" name="Boleto" id="">Boleto</a>
+                    </form>
+                </div>
+                <div class="pedido">
+                    <h2>Resumo do Pedido</h2>
+                </div>
+                <div class="continua">
+                    <button class="continuar">Continuar</button>
+                </div>
 
-                    <label class="frete ">
-                        <span>frete</span>
-                    </label>
-
-                    <label class="preco total">
-                        <span>total</span>
-                    </label>
-                </form>
-            </div>
-            <div class="forma pagamento">
-                
-            </div>
-            <button type="submit"> Confirmar Pagamento </button>
+            </main>
     </body>
 
     </html>
