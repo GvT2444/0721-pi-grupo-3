@@ -2,11 +2,12 @@
 
     <body>
         <%-include("partes/header")%>
+            <link rel="stylesheet" href="css/geral.css">
             <link rel="stylesheet" href="css/finaliza.css">
             <main>
                 <div class="info">
                     <span>
-                        <h3>Suas Informações</h3>
+                        <h2>Suas Informações</h2>
                     </span>
                     <form>
                         <h4>rua</h4>
@@ -17,13 +18,20 @@
                     </form>
                 </div>
                 <div class="pay">
-                    <span>Fomas de Pagamento</span>
+                    <span><h2>Fomas de Pagamento</h2></span>
+                    <form>
+                        <a><input type="checkbox" name="Pix" id="">Pix</a>
+                        <a><input type="checkbox" name="Cartao" id="">Cartão</a>
+                        <a><input type="checkbox" name="Boleto" id="">Boleto</a>
+                    </form>
                 </div>
                 <div class="pedido">
-                    <h3>Resumo do Pedido</h3>
+                    <h2>Resumo do Pedido</h2>
+                </div>
+                <div class="continua">
                     <button class="continuar">Continuar</button>
                 </div>
-                
+
             </main>
     </body>
 
