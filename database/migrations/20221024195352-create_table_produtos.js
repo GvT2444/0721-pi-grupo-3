@@ -10,6 +10,10 @@ module.exports = {
           allowNull: false,
           autoIncrement: true
         },
+        imagem: {
+          type: Sequelize.DataTypes.STRING(45),
+          allowNull: true,
+        },
         nome: {
           type: Sequelize.DataTypes.STRING(45),
           allowNull: false,
