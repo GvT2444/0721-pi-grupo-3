@@ -13,10 +13,13 @@
             <h3>Veja nossos produtos</h3>
             <div class="produtos">
                 <div class="produto" id="produto1">
-                <img src="img/depositodemadeira3.jpg" alt="">
-                <h3>Titulo</h3>
-                <h3>estrelinha</h3>
-                <h3>R$9999,99</h3>
+                    <% for(let p of produtos){ %>
+                        <article>
+                            <img src="img/<%=p.imagem%>" alt="<%=p.nome%>">
+                            <h3><%=p.nome%></h3>
+                            <h3>R$ <%=p.preco%></h3>
+                        </article>
+                    <% } %>
                 </div>
                 <div class="produto" id="produto2">
                 <img src="img/depositodemadeira3.jpg" alt="">

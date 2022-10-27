@@ -28,7 +28,7 @@ const produtos = [
   {
     id: 5,
     imagem: "depositodemadeira.jpg",
-    nome:"5",
+    nome:"produto5",
     preco: 5999.99
   },
 ]
