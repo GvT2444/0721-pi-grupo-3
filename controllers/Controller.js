@@ -1,6 +1,10 @@
+const {sequelize} = require('../database/models');
+
 const Controller = {
-    home: (req, res) => {
-        res.render('home.ejs')
+    home:  async (req,res) => {
+        let sql = `SELECT * FROM produtos`;
+        let produtos = await sequelize.query(sql, {type:sequelize.QueryTypes.SELECT});
+        return res.render('home.ejs',{produtos});
     },
     mostralogin: (req, res) => {
         res.render('login.ejs')

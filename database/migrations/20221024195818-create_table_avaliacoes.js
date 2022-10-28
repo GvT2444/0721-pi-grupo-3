@@ -4,6 +4,12 @@ module.exports = {
     await queryInterface.createTable(
       'avaliacoes',
       {
+        id: {
+          type: Sequelize.DataTypes.INTEGER,
+          primaryKey: true,
+          allowNull: false,
+          autoIncrement: true
+        },
         produtos_id: {
           type: Sequelize.DataTypes.INTEGER,
           allowNull: false,
