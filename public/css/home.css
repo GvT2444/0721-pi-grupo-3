@@ -39,33 +39,8 @@ section h3 {
     width: 215px;
 }
 
-#produto1 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-#produto2 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-#produto3 {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-#produto4 {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-#produto5 {
-    grid-column-start: 5;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
+.carrinho button {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
 }

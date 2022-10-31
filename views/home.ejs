@@ -13,11 +13,15 @@
             <h3>Veja nossos produtos</h3>
             <div class="produtos">
                 <% for(let p of produtos){ %>
-                    <div class="produto" id="produto1">
+                    <div class="produto" id="produto">
                         <article>
                             <img src="img/<%= p.imagem%>" alt="<%= p.nome%>">
                             <h3><%= p.nome%></h3>
                             <h3>R$ <%= p.preco%></h3>
+                            <form class="carrinho" action="/carrinho" method="post">
+                                <input type="hidden" name="aEscolhida" value="<%= p.id %>">
+                                <button type="submit">+Add</button>
+                            </form>
                         </article>
                     </div>
                 <% } %>

@@ -13,6 +13,7 @@ router.get('/cadastro', Controller.mostracadastro);
 router.get('/listagem', Controller.listagemp);
 
 router.get('/carrinho', Controller.mostracarrinho);
+router.post('/carrinho', Controller.mostracarrinho);
 
 router.get('/painel', Controller.painelusuario);
 
