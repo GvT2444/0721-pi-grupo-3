@@ -19,7 +19,7 @@
                             <h3><%= p.nome%></h3>
                             <h3>R$ <%= p.preco%></h3>
                             <form class="carro" action="/carrinho" method="post">
-                                <input type="hidden" name="aEscolhida" value="<%= p.id %>">
+                                <input type="hidden" name="id" value="<%= p.id %>">
                                 <button type="submit">+Add</button>
                             </form>
                         </article>
@@ -28,7 +28,6 @@
             </div>
         </section>
         <%-include("partes/footer")%>
-        <script src="home.js"></script>
     </body>
 
     </html>

@@ -15,8 +15,14 @@ const Controller = {
     listagemp: (req, res) => {
         res.render('listagemP.ejs')
     },
-    mostracarrinho: (req, res) => {
-        res.render('carrinho.ejs')
+    mostracarrinho: async (req,res) => {
+        let sql = `SELECT * FROM produtos`;
+        let produtos = await sequelize.query(sql, {type:sequelize.QueryTypes.SELECT});
+        let lista = [];
+        return res.render('carrinho.ejs',{produtos, lista});
+    },
+    addAoCarrinho: (req, res) => {
+        res.send(req.body);
     },
     finalizacompra: (req, res) => {
         res.render('finalizaCompra.ejs')

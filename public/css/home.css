@@ -3,11 +3,9 @@ main {
     margin: 5px 0px 15px 0px;
 }
 
-.container img {
-    width: 1338px;
-    height: 300px;
-    margin: 0 0px 0 6px;
-    box-shadow: 0px 3px 15px 0px rgb(70 70 70);
+section h3 {
+    margin-left: 15px;
+    margin-top: 0px;
 }
 
 section {
@@ -20,9 +18,11 @@ section {
     justify-content: space-around;
 }
 
-section h3 {
-    margin-left: 15px;
-    margin-top: 0px;
+.container img {
+    width: 1338px;
+    height: 300px;
+    margin: 0 0px 0 6px;
+    box-shadow: 0px 3px 15px 0px rgb(70 70 70);
 }
 
 .produto {
@@ -44,6 +44,7 @@ section h3 {
     padding: 5px;
     background-color: white;
     border: 1px black solid;
+    border-radius: 3px;
     width: 50px;
 }
 
