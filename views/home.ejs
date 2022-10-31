@@ -18,7 +18,7 @@
                             <img src="img/<%= p.imagem%>" alt="<%= p.nome%>">
                             <h3><%= p.nome%></h3>
                             <h3>R$ <%= p.preco%></h3>
-                            <form class="carrinho" action="/carrinho" method="post">
+                            <form class="carro" action="/carrinho" method="post">
                                 <input type="hidden" name="aEscolhida" value="<%= p.id %>">
                                 <button type="submit">+Add</button>
                             </form>
