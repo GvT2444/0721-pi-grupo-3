@@ -20,6 +20,18 @@ module.exports = {
             key: "id"
           }
         },
+        valor: {
+          type: Sequelize.DataTypes.DECIMAL(6,2),
+          allowNull: false
+        },
+        endereco: {
+          type: Sequelize.DataTypes.STRING(45),
+          allowNull: false,
+        },
+        status: {
+          type: Sequelize.DataTypes.DECIMAL(1),
+          allowNull: true
+        },
       }
     );
   },

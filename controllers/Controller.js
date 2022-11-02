@@ -21,8 +21,9 @@ const Controller = {
         let lista = [];
         return res.render('carrinho.ejs',{produtos, lista});
     },
-    addAoCarrinho: (req, res) => {
-        res.send(req.body);
+    addAoCarrinho: async (req, res) => {
+        let {id} = req.body;
+        res.redirect("/carrinho")
     },
     finalizacompra: (req, res) => {
         res.render('finalizaCompra.ejs')
@@ -34,8 +35,6 @@ const Controller = {
         res.render('produtoInterno.ejs')
     }
 }
-
-
 
 
 module.exports = Controller;
