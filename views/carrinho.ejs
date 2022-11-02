@@ -1,0 +1,53 @@
+<%- include("partes/head") %>
+
+    <body>
+        <link rel="stylesheet" href="css/carrinho.css">
+        <%- include("partes/header") %>
+            <main>
+                <div class="principal">
+                    <section class="produtos">
+                        <div class="produto">
+                            <input type="checkbox" name="selecionar" id="selecionar">
+                            <img src="img/madeira2.jpg" alt="">
+                            <div class="textos">
+                                <h1> Madeira de carvalho</h1>
+                                <p class="preco">R$ 420</p>
+                            </div>
+                        </div>
+                        <div class="produto">
+                            <input type="checkbox" name="selecionar" id="selecionar">
+                            <img src="img/madeira2.jpg" alt="">
+                            <div class="textos">
+                                <h1> Madeira de carvalho</h1>
+                                <p class="preco">R$ 420</p>
+                            </div>
+                        </div>
+                        <div class="produto">
+                            <input type="checkbox" name="selecionar" id="selecionar">
+                            <img src="img/madeira2.jpg" alt="">
+                            <div class="textos">
+                                <h1> Madeira de carvalho</h1>
+                                <p class="preco">R$ 420</p>
+                            </div>
+                        </div>
+                        <div class="produto">
+                            <input type="checkbox" name="selecionar" id="selecionar">
+                            <img src="img/madeira2.jpg" alt="">
+                            <div class="textos">
+                                <h1> Madeira de carvalho</h1>
+                                <p class="preco">R$ 420</p>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="resumo">
+
+                            <h1 class="resumodopedido">Resumo do pedido</h1>
+                            <div class="quantidade">4 produtos</div>
+                            <div class="produtopreco">1680</div>
+                            <div class="frete"></div>
+                            <div class="valorfrete"></div>
+                    </div>
+                </div>
+            </main>
+            <%-include("partes/footer")%>
+    </body>
