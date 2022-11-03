@@ -1,12 +1,15 @@
 <%-include("partes/head")%>
 
     <body>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js ">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css">
         <link rel="stylesheet" href="css/geral.css">
         <link rel="stylesheet" href="css/home.css">
         <%-include("partes/header")%>
         <main>
-            <div class="container">
-                <img src="img/depositodemadeira.jpg" alt="">
+            <div class="carousel">
+                <div><img src="/img/depositodemadeira.jpg" alt=""></div>
             </div>
         </main>
         <section>
@@ -28,6 +31,7 @@
             </div>
         </section>
         <%-include("partes/footer")%>
+        <script src="carrosel.js"></script>
     </body>
 
     </html>
