@@ -20,6 +20,9 @@ const clientes = [
   {
     id: 5,
     nome: "luiz algusto"
+  }, {
+    id: 6,
+    nome: "Gus da gameplay advanced"
   }
 ]
 
