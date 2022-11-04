@@ -1,26 +1,27 @@
 <body>
     <link rel="stylesheet" href="css/cadastro.css">
-    <form method="post" enctype="multipart/form-data" action="/cadastro">
+    <form method="post"  action="/cadastro">
+    
         <h2>Eucalyptus</h2>
         <div id="mae">
             <label class="input">
                 <span>Nome:</span>
-                <input class="focus"  type="text" name="Nome"  placeholder="Nome completo">
+                <input class="focus"  type="text" name="nome" id="nome"  placeholder="Nome completo">
             </label>
             <label  class="input">
                 <span>E-mail:</span>
-                <input class="focus" type="text" name="email" placeholder="Digite o seu email">
+                <input class="focus" type="text" name="email" id="email" placeholder="Digite o seu email">
             </label>
             <label  class="input" >
                 <span>Senha:</span>
-                <input class="focus" type="password" name="Senha"  placeholder="Digite a sua Senha"></input>
+                <input class="focus" type="password" name="senha" id="senha"  placeholder="Digite a sua Senha"></input>
             </label>
             <label  class="input">
                 <span>Confirmação da Senha:</span>
-                <input class="focus" type="password" name="Confirmação"  placeholder="Confirme sua Senha">
+                <input class="focus" type="password" name="confirmacao" id="confirmacao"  placeholder="Confirme sua Senha">
             </label>
             <div class="controles">
-                <button type="submit" href="/login">Login</button>
+                <a href="/login">Ir para a tela de login</a>
                 <button type="submit">Entrar</button>
             </div>
         </div>

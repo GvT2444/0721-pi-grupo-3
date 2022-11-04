@@ -24,16 +24,6 @@ module.exports = {
             key: "id"
           }
         },
-        pedidos_clientes_id: {
-          type: Sequelize.DataTypes.INTEGER,
-          allowNull: false,
-          references: {
-            model: {
-              tableName: 'pedidos'
-            },
-            key: "id"
-          }
-        },
       }
     );
   },
