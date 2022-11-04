@@ -1,12 +1,40 @@
-<%- include("partes/head") %>
+<%-include("partes/head")%>
 
     <body>
         <link rel="stylesheet" href="css/geral.css">
         <link rel="stylesheet" href="css/home.css">
-        <%- include("partes/header") %>
-
-                
-        <%- include("partes/footer") %>   
+        <%-include("partes/header")%>
+        <main>
+            <div class="carrossel">
+                <div class="container" id="img">
+                <img src="img/depositodemadeira.jpg" alt="">
+                <img src="img/depositodemadeira2.jpg" alt="">
+                <img src="img/depositodemadeira3.jpg" alt="">
+                <img src="img/depositodemadeira4.jpg" alt="">
+                <img src="img/depositodemadeira.jpg" alt="">
+                </div>
+            </div>
+        </main>
+        <section>
+            <h3>Veja nossos produtos</h3>
+            <div class="produtos">
+                <% for(let p of produtos){ %>
+                    <div class="produto" id="produto">
+                        <article>
+                            <img src="img/<%= p.imagem%>" alt="<%= p.nome%>">
+                            <h3><%= p.nome%></h3>
+                            <h3>R$ <%= p.preco%></h3>
+                            <form class="carro" action="/carrinho" method="post">
+                                <input type="hidden" name="id" value="<%= p.id %>">
+                                <button type="submit">+Add</button>
+                            </form>
+                        </article>
+                    </div>
+                <% } %>
+            </div>
+        </section>
+        <%-include("partes/footer")%>
+        <script src="carrosel.js"></script>
     </body>
-    
 
+    </html>
