@@ -31,17 +31,6 @@
       </div>
     </div>
   </main>
-  <script type="text/javascript">
-
-    const buton = document.getElementById("1");
-    let produto = document.getElementsByClassName("produtos");
-    function deleteTarefa(id) {
-      let pos = produtos.findIndex((produto) => produto.id == id);
-      produto.splice(pos, 1);
-      buton.addEventListener("submit", deleteTarefa);
-    }
-   
-    console.log(produto);
-  </script>
-  <%-include("partes/footer")%>
-</body>
+  <%-include(partes/footer)%>
+            
+    </body>
