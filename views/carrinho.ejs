@@ -1,39 +1,36 @@
 <%- include("partes/head") %>
 
-    <body>
-        <link rel="stylesheet" href="css/carrinho.css">
-        <%- include("partes/header") %>
-            <main>
-                <div class="principal">
-                    <section class="produtos">
-                        <%for(let p of produto){ %>
-                            <article>
-                                <div class="produto">
-                                    <input type="checkbox" name="selecionar" id="selecionar">
-                                    <img src="img/<%= p.imagem%>" alt="">
-                                    <div class="textos">
-                                        <h1>
-                                            <%= p.nome%>
-                                        </h1>
-                                        <p class="preco">
-                                            <%= p.preco%>
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                        <%}%>
-                    </section>
-                    <div class="resumo">
-
-                        <h1 class="resumodopedido">Resumo do pedido</h1>
-                        <div class="quantidade">4 produtos</div>
-                        <div class="produtopreco">1999,99</div>
-                        <div class="cep">31844-220</div>
-                        <div class="valorfrete">R$12,40</div>
-                    </div>
-                </div>
-            </main>
-            <script type="text/javascript" src="../js/carrinho.js"></script>
-            <%-include("partes/footer")%>
+<body>
+  <link rel="stylesheet" href="css/carrinho.css" />
+  <%- include("partes/header") %>
+  <main>
+    <div class="principal">
+      <section class="produtos">
+        <%for(let p of produto){ %>
+        <article>
+          <div class="produto">
+            <input type="checkbox" name="selecionar" id="selecionar" />
+            <img src="img/<%= p.imagem%>" alt="" />
+            <div class="textos">
+              <h1><%= p.nome%></h1>
+              <p class="preco"><%= p.preco%></p>
+            </div>
+            <button id="1" type="submit">
+              <i class="material-icons">delete</i>
+            </button>
+          </div>
+        </article>
+        <%}%>
+      </section>
+      <div class="resumo">
+        <h1 class="resumodopedido">Resumo do pedido</h1>
+        <div class="quantidade">4 produtos</div>
+        <div class="produtopreco">1680</div>
+        <div class="frete"></div>
+        <div class="valorfrete"></div>
+      </div>
+    </div>
+  </main>
+  <%-include(partes/footer)%>
             
     </body>
