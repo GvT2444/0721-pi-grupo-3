@@ -6,8 +6,26 @@ const Controller = {
         let produtos = await sequelize.query(sql, { type: sequelize.QueryTypes.SELECT });
         return res.render('home.ejs', { produtos });
     },
-    mostralogin: (req, res) => {
-        res.render('login.ejs')
+    mostralogin: async (req, res) => {
+        let sql = `SELECT * FROM clientes`;
+        let clientes = await sequelize.query(sql, { type: sequelize.QueryTypes.SELECT });
+
+        let emailDigitado = req.body.email;
+        let senhaDigitada = req.body.senha;
+
+        let cliente = clientes.find(
+            c => {
+                if (emailDigitado == c.email && senhaDigitada == c.senha) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        );
+        req.session.cliente = cliente
+
+        res.render('login.ejs', {clientes});
+        
     },
     mostracadastro: (req, res) => {
         res.render('cadastro.ejs')
@@ -19,7 +37,7 @@ const Controller = {
         let sql = `SELECT * FROM produtos`;
         let produtos = await sequelize.query(sql, { type: sequelize.QueryTypes.SELECT });
         let produto = req.session.carrinho;
-        return res.render('carrinho.ejs', {produto});
+        return res.render('carrinho.ejs', { produto });
     },
     addAoCarrinho: async (req, res) => {
         let { id } = req.body;

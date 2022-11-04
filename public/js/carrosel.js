@@ -1,6 +1,15 @@
-$('.carousel').slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 4
-});
+let carrossel = 1;
+document.getElementById("radio1").checked = true;
+
+setInterval(function () {
+    nextImage();
+}, 1000)
+
+function nextImage() {
+    carrossel++;
+    if (carrossel > 4) {
+        carrossel = 1;
+    }
+
+    document.getElementById("radio" + carrossel).checked = true;
+}

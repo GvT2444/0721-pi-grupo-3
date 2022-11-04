@@ -1,48 +1,25 @@
+<%- include("partes/head") %>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/geral.css">
-    <link rel="stylesheet" href="css/painel.css">
-    <title>Eucalyptus</title>
-</head>
+    <body>
+        <%- include("partes/header") %>
+            <main>
+                <section class="U">
+                    <div class="usuario">
+                        <img src="../img/usuario.png" alt="">
+                        <h2>Nome de usuario</h2>
+                    </div>
+                    <div class="opcoes">
+                        <h1>Alterar perfil</h1>
+                        <h1>minha conta</h1>
+                        <h1>meus cupons</h1>
+                    </div>
+                </section>
+                <section class="">
+                    <div class="tudo"></div>
+                </section>
+            </main>
 
-<body>
-    <header>
-            <img class="Eucalyptus" src="../img/Eucalyptus.png" alt="">
-        <div class="buscar">
-            <input type="text" class="barbusca" placeholder="O que você procura?">
-            <div class="pesquisar"> <img src="../img/lupa.png" alt=""></div>
-        </div>   
-            <div class="agrupar">
-                <a class="conta" href="">Crie sua conta</a>
-                <img src="../img/usuario.png" alt="" class="perfil">
-                <img class="carrinho" src="../img/carrinho.png" alt="">
-                
-            </div>
-        
-        </div>
-    </header>
-    <main>
-    <section class="U">    
-        <div class="usuario">
-            <img src="../img/usuario.png" alt="">
-            <h2>Nome de usuario</h2>
-        </div>
-        <div class="opcoes">
-            <h1>Alterar perfil</h1>
-            <h1>minha conta</h1>
-            <h1>meus cupons</h1>
-        </div>
-    </section>
-    <section class="">
-    <div class="tudo"></div>
-    </section>
-    </main>
-    
-</body>
-</html>
+            <%- include("partes/footer") %>
+    </body>
 
+    </html>

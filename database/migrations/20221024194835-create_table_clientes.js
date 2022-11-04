@@ -11,6 +11,14 @@ module.exports = {
           autoIncrement: true
         },
         nome: {
+          type: Sequelize.DataTypes.STRING(100),
+          allowNull: false,
+        },
+        email: {
+          type: Sequelize.DataTypes.STRING(45),
+          allowNull: false,
+        },
+        senha:{
           type: Sequelize.DataTypes.STRING(45),
           allowNull: false,
         }
