@@ -30,6 +30,9 @@ const Controller = {
     mostracadastro: (req, res) => {
         res.render('cadastro.ejs')
     },
+    addCadastro : async (req, res )=> {
+        res.send(req.body);
+    },
     listagemp: (req, res) => {
         res.render('listagemP.ejs')
     },
