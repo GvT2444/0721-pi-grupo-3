@@ -1,4 +1,5 @@
-const {cliente ,sequelize } = require('../database/models');
+const { sequelize } = require('../database/models');
+const bcrypt = require('bcrypt')
 
 const Controller = {
     home: async (req, res) => {
@@ -27,52 +28,23 @@ const Controller = {
         res.render('login.ejs', {clientes});
         
     },
-    mostraCadastro:(req, res) => {
+    mostracadastro:(req, res) => {
 
         res.render('cadastro.ejs');
         
     },
 
-
-
-    gravaCadastro: async (req,res) => {
-        let sql = `SELECT * FROM clientes`;
-        let cliente = await sequelize.query(sql, {type:sequelize.QueryTypes.SELECT});
-
-        const {nome, email, senha, confirmacao} = req.body;
-
-        if (senha !== confirmacao) {
-            res.render('error.ejs', {msg: "Senha e confirmação não conferem."})
-            return;
-        }
-
-        const c = await cliente.create(
-            {
-                nome,
-                email,
-                senha: bcrypt.hashSync(senha, 10)
-            }
-        )
-
-        req.session.usuario = c;
-
-        res.redirect('/home');
-    
-    },
-
     addCadastro: async (req,res) => {
-        let sql = `SELECT * FROM clientes`;
-        let clientes = await sequelize.query(sql, { type: sequelize.QueryTypes.SELECT });
         let {nome, email, senha} = req.body;
 
-        const cliente = await clientes.create(
+        const cli = await Clientes.create(
             {
                 nome,
                 email,
                 senha: bcrypt.hashSync(senha, 10)}
         )
 
-        req.session.cliente = cliente;
+        req.session.cliente = cli;
 
         res.redirect("/home");
 
