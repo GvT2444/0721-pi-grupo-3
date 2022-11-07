@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 const { sequelize } = require('../database/models');
 const bcrypt = require('bcrypt')
 
+=======
+const {cliente ,sequelize } = require('../database/models');
+const bcrypt = require('bcrypt');
+>>>>>>> 8daeef1aaded46992acde6076058916de4377c25
 const Controller = {
     home: async (req, res) => {
         let sql = `SELECT * FROM produtos`;
@@ -33,31 +38,65 @@ const Controller = {
         res.render('cadastro.ejs');
         
     },
+<<<<<<< HEAD
 
+=======
+    gravaCadastro: async (req,res) => {
+        let sql = `SELECT * FROM clientes`;
+        let cliente = await sequelize.query(sql, {type:sequelize.QueryTypes.SELECT});
+
+        const {nome, email, senha, confirmacao} = req.body;
+
+        if (senha !== confirmacao) {
+            res.render('error.ejs', {msg: "Senha e confirmação não conferem."})
+            return;
+        }
+
+        const clientes = await clientes.create(
+            {
+                nome,
+                email,
+                senha: bcrypt.hashSync(senha, 10)
+            }
+        )
+
+        req.session.usuario = clientes;
+
+        res.redirect('/home');
+    
+    },
+>>>>>>> 8daeef1aaded46992acde6076058916de4377c25
     addCadastro: async (req,res) => {
         let {nome, email, senha} = req.body;
 
+<<<<<<< HEAD
         const cli = await Clientes.create(
+=======
+
+
+        const c = await clientes.create(
+>>>>>>> 8daeef1aaded46992acde6076058916de4377c25
             {
                 nome,
                 email,
                 senha: bcrypt.hashSync(senha, 10)}
         )
 
+<<<<<<< HEAD
         req.session.cliente = cli;
+=======
+        req.session.cliente = c;
+>>>>>>> 8daeef1aaded46992acde6076058916de4377c25
 
         res.redirect("/home");
 
     },
-
     listagemp: (req, res) => {
         res.render('listagemP.ejs')
     },
     mostracarrinho: async (req, res) => {
-        let sql = `SELECT * FROM produtos`;
-        let produtos = await sequelize.query(sql, { type: sequelize.QueryTypes.SELECT });
-        let produto = req.session.carrinho;
-        return res.render('carrinho.ejs', { produto });
+        let produtos = req.session.carrinho? req.session.carrinho:[]
+        return res.render('carrinho.ejs', { produtos});
     },
     addAoCarrinho: async (req, res) => {
         let { id } = req.body;
@@ -78,8 +117,8 @@ const Controller = {
     painelusuario: (req, res) => {
         res.render('painelUsuario.ejs')
     },
-    produtointerno: (req, res) => {
-        res.render('produtoInterno.ejs')
+    produtointerno: async (req, res) => {  
+         res.render('produtoInterno.ejs');
     }
 }
 
