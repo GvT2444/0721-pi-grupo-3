@@ -1,5 +1,5 @@
 const {cliente ,sequelize } = require('../database/models');
-
+const bcrypt = require('bcrypt');
 const Controller = {
     home: async (req, res) => {
         let sql = `SELECT * FROM produtos`;
@@ -32,9 +32,6 @@ const Controller = {
         res.render('cadastro.ejs');
         
     },
-
-
-
     gravaCadastro: async (req,res) => {
         let sql = `SELECT * FROM clientes`;
         let cliente = await sequelize.query(sql, {type:sequelize.QueryTypes.SELECT});
@@ -46,7 +43,7 @@ const Controller = {
             return;
         }
 
-        const c = await cliente.create(
+        const clientes = await clientes.create(
             {
                 nome,
                 email,
@@ -54,38 +51,36 @@ const Controller = {
             }
         )
 
-        req.session.usuario = c;
+        req.session.usuario = clientes;
 
         res.redirect('/home');
     
     },
-
     addCadastro: async (req,res) => {
         let sql = `SELECT * FROM clientes`;
         let clientes = await sequelize.query(sql, { type: sequelize.QueryTypes.SELECT });
         let {nome, email, senha} = req.body;
 
-        const cliente = await clientes.create(
+
+
+        const c = await clientes.create(
             {
                 nome,
                 email,
                 senha: bcrypt.hashSync(senha, 10)}
         )
 
-        req.session.cliente = cliente;
+        req.session.cliente = c;
 
         res.redirect("/home");
 
     },
-
     listagemp: (req, res) => {
         res.render('listagemP.ejs')
     },
     mostracarrinho: async (req, res) => {
-        let sql = `SELECT * FROM produtos`;
-        let produtos = await sequelize.query(sql, { type: sequelize.QueryTypes.SELECT });
-        let produto = req.session.carrinho;
-        return res.render('carrinho.ejs', { produto });
+        let produtos = req.session.carrinho? req.session.carrinho:[]
+        return res.render('carrinho.ejs', { produtos});
     },
     addAoCarrinho: async (req, res) => {
         let { id } = req.body;
@@ -106,8 +101,8 @@ const Controller = {
     painelusuario: (req, res) => {
         res.render('painelUsuario.ejs')
     },
-    produtointerno: (req, res) => {
-        res.render('produtoInterno.ejs')
+    produtointerno: async (req, res) => {  
+         res.render('produtoInterno.ejs');
     }
 }
 
