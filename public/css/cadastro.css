@@ -2,7 +2,8 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
-    background-image: url('../img/eucalipto-foto.jpg');
+    background-image: url('../img/arvore.jpg');
+    background-size: cover;
 }
 
 main {
@@ -12,7 +13,7 @@ main {
 }
 
 .cadastrar {
-    background-color: rgba(0, 0, 0, 0.20);
+    background-color: rgba(0, 0, 0, 0.39);
     border-radius: 5px;
     width: 420px;
     height: 500px;

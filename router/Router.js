@@ -9,6 +9,7 @@ router.get('/home', Controller.home);
 router.get('/login', Controller.mostralogin);
 
 router.get('/cadastro', Controller.mostracadastro);
+router.post('/cadastro', Controller.addCadastro)
 
 router.get('/listagem', Controller.listagemp);
 
