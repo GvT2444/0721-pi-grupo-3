@@ -1,4 +1,4 @@
-const {cliente, sequelize} = require('../database/models');
+const {cliente ,sequelize } = require('../database/models');
 
 const Controller = {
     home: async (req, res) => {
@@ -13,7 +13,7 @@ const Controller = {
         let emailDigitado = req.body.email;
         let senhaDigitada = req.body.senha;
 
-        let cliente = clientes.find(
+        let cli = clientes.find(
             c => {
                 if (emailDigitado == c.email && senhaDigitada == c.senha) {
                     return true;
@@ -59,6 +59,25 @@ const Controller = {
         res.redirect('/home');
     
     },
+
+    addCadastro: async (req,res) => {
+        let sql = `SELECT * FROM clientes`;
+        let clientes = await sequelize.query(sql, { type: sequelize.QueryTypes.SELECT });
+        let {nome, email, senha} = req.body;
+
+        const cliente = await clientes.create(
+            {
+                nome,
+                email,
+                senha: bcrypt.hashSync(senha, 10)}
+        )
+
+        req.session.cliente = cliente;
+
+        res.redirect("/home");
+
+    },
+
     listagemp: (req, res) => {
         res.render('listagemP.ejs')
     },

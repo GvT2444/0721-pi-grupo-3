@@ -1,5 +1,5 @@
 body{
-    background-color: #c0c0c0;
+    background-color: #dfdfdf;;
     color: #1e1c1c;
     margin: 0;
     padding: 0;
@@ -105,6 +105,7 @@ footer {
     color: #999;
     background-color: white;
     justify-content: space-evenly;
+    margin-top: 30px;
     
 }
 

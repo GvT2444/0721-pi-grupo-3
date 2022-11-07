@@ -6,33 +6,46 @@
             <link rel="stylesheet" href="css/finaliza.css">
             <main>
                 <div class="info">
-                    <span>
-                        <h2>Suas Informações</h2>
-                    </span>
+                    <span><h2>Suas Informações</h2></span>
                     <form>
-                        <h4>rua</h4>
-                        <h4>bairro</h4>
-                        <h4>estado/cidade</h4>
-                        <h4>nome cliente</h4>
-                        <h4>cep</h4>
+                        <h4 class="moradia">Rua: </h4>
+                        <h4 class="moradia">Bairro: </h4>
+                        <h4 class="moradia">Estado/Cidade: </h4>
+                        <h4 class="pessoa">Nome: </h4>
+                        <h4 class="cep">Cep: </h4>
                     </form>
+                    
                 </div>
                 <div class="pay">
                     <span><h2>Fomas de Pagamento</h2></span>
                     <form>
-                        <a><input type="checkbox" name="Pix" id="">Pix</a>
-                        <a><input type="checkbox" name="Cartao" id="">Cartão</a>
-                        <a><input type="checkbox" name="Boleto" id="">Boleto</a>
+                        <a class="ja"><input type="checkbox" name="Pix" id="">Pix</a>
+                        <a class="ja"><input type="checkbox" name="Cartao" id="">Cartão</a>
+                        <a class="bo"><input class="ja" type="checkbox" name="Boleto" id="">Boleto</a>
                     </form>
+                    
                 </div>
+                
                 <div class="pedido">
                     <h2>Resumo do Pedido</h2>
+                    <form>
+                        <div class="Fp">
+                            <h3>2 Produtos: </h3>
+                            <h3>R$2690,99</h3>
+                        </div>
+                        <div class="F">
+                            <h3 class="f">Frete: </h3>
+                            <h3 class="g">R$20,99</h3>
+                        </div>
+                        <div class="F">
+                            <h3 class="f">Total: </h3>
+                            <h3 class="g">R$2710,99</h3>
+                        </div>
+                    </form>
                 </div>
-                <div class="continua">
-                    <button class="continuar">Continuar</button>
-                </div>
-
+                <button class="continuar">Continuar</button>
             </main>
+            <%-include("partes/footer")%>
     </body>
 
     </html>

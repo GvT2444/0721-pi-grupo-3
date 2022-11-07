@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <body>
     <link rel="stylesheet" href="css/cadastro.css">
     <form method="post"  action="/cadastro">
@@ -28,3 +29,42 @@
     </form>
 </body>
 </html>
+=======
+<%- include("partes/head") %>
+
+    <body>
+        <link rel="stylesheet" href="css/eucalipto-foto.jpg.css">
+        <link rel="stylesheet" href="css/cadastro.css">
+        <main>
+            <div class="cadastro">
+                <form action="/cadastro" method="post">
+                    <div class="cadastrar">
+                        <img src="img/Eucalyptus2.png" alt="">
+                        <label>
+                            <label class="barnome">
+                                <span class="nome">Nome</span>
+                                <input type="text" name="nome" id="nome" placeholder="Informe seu nome">
+                            </label>
+                            <label class="baremail">
+                                <span class="email">Email</span>
+                                <input type="text" name="email" id="email" placeholder="Informe seu email">
+                            </label>
+
+                            <label class="barsenha ">
+                                <span class="senha">Senha</span>
+                                <input type="password" name="senha" id="senha" placeholder="Informe seu senha">
+                            </label>
+
+                            <div id="esqueceu">
+                                <a href="/login" class="barEsqueci">Login</a>
+                                <button type="submit">Cadastrar</button>
+                            </div>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
+
+    </html>
+>>>>>>> 3601064441844c968c08f1ab5667b99e127a8604

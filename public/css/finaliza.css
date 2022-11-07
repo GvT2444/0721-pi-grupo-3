@@ -1,12 +1,66 @@
 main {
     display: grid;
     margin-top: 50px ;
+    justify-content: space-around;
+    font-size: 20px;
 }
 
 button {
-    padding: 0px;
-    margin: 0px;
-    border: 0px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 3;
+    grid-row-end: 3;
+    margin-left: 50px;
+    border: 0;
+    padding: 0;
+    width: 300px;
+    height: 80px;
+    background-color: #DF8233;
+    border-radius: 5px;
+    font-size: 26px;
+    color: white;
+}
+
+form {
+    background-color: white;
+}
+
+input {
+    border-radius: 5px;
+}
+
+.pay span {
+    height: 100px;
+    margin: 0;
+}
+
+.pay a {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    background-color: white;
+    padding-left: 10px;
+}
+
+.bo {
+    border-radius: 5px ;
+}
+
+.ja {
+    border-radius: 5px 5px 0 0 ;
+    border-bottom: 2px solid #666666;
+}
+
+.pedido h2 {
+    margin: 5px 5px 5px 15px;
+}
+
+.p-f {
+    margin: 5px 5px 5px 15px;
+}
+
+.total {
+    margin: 5px 5px 5px 15px;
 }
 
 .info {
@@ -15,7 +69,7 @@ button {
     grid-row-start: 1;
     grid-row-end: 2;
     border-radius: 5px;
-    background-color: rgb(255, 255, 255);
+    width: 900px;
 }
 
 .pay {
@@ -23,10 +77,9 @@ button {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2 ;
-    grid-row-end: 3;
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-    margin-top: 30px;
+    grid-row-end: 4;
+    border-radius: 15px;
+    max-height: 400px;
 }
 
 .pedido {
@@ -36,22 +89,82 @@ button {
     grid-row: 1;
     grid-row-end: 3;
     border-radius: 5px;
-    width: 299px;
+    width: 300px;
+    height: 500px;
     margin-left: 50px;
+    max-height: 500px;
     background-color: white;
+    box-shadow:  0 2px 6px -1px rgba(0, 0, 0, 0.16), 0 1px 4px -1px rgba(0, 0, 0, 0.04);
 }
 
-.continua {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row: 2;
-    grid-row-end: 3;
-    margin-top: 15px;
-    border: 0;
-    padding: 0;
-    background-color: #DF8233;
+.pay form {
+    display: flex;
+    flex-direction: column;
     border-radius: 5px;
-    box-shadow: 9px 6px 10px -1px rgba(0, 0, 0, 0.25);
-    font-size: 30px;
+    height: 300px;
+    width: 890;
+    border-radius: 5px;
+    box-shadow:  0 2px 6px -1px rgba(0, 0, 0, 0.16), 0 1px 4px -1px rgba(0, 0, 0, 0.04);
 }
 
+.info form {
+    display: grid;
+    border-radius: 5px;
+    box-shadow:  0 2px 6px -1px rgba(0, 0, 0, 0.16), 0 1px 4px -1px rgba(0, 0, 0, 0.04);
+}
+
+.pedido form {
+    margin: 0px 10px 0px 10px;
+}
+
+h4 {
+    margin: 10px 0 10px 20px;
+    font-size: 20px;
+}
+
+.moradia {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.pessoa {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row: 1;
+    grid-row-end: 1;
+}
+
+.cep {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row: 2;
+    grid-row-end: 2;
+}
+
+.F {
+    display: grid;
+    border-bottom: 1px solid #666666;
+    width: 270px;
+}
+
+.f {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row: 2;
+    grid-row-end: 2;
+    margin-top: 50px;
+}
+
+.g {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row: 2;
+    grid-row-end: 2;
+    margin-top: 50px;
+}
+
+.Fp {
+    border-bottom: 1px solid #666666;
+    width: 270px;
+    margin: 0;
+}
