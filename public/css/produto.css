@@ -94,7 +94,8 @@ li > img {
     border: 0;
     border-radius: 5px;
     font-size: 20px;
-    margin: 65px 30px 0 30px;
+    margin: 60px 30px 0 30px;
+    box-shadow:  0 2px 6px -1px rgba(0, 0, 0, 0.16), 0 1px 4px -1px rgba(0, 0, 0, 0.04);
 }   
 
 .adicionar {
@@ -105,7 +106,8 @@ li > img {
     border: 1px solid #df8233;
     border-radius: 5px;
     font-size: 14px;
-    margin: 17px 30px 5px 30px;
+    margin: 20px 30px 0 30px;
+    box-shadow:  0 2px 6px -1px rgba(0, 0, 0, 0.16), 0 1px 4px -1px rgba(0, 0, 0, 0.04);
 }   
 
 .nomedaloja {
