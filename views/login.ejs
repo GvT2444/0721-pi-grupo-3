@@ -1,46 +1,37 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<%- include("partes/head") %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="imagem/png" href="../img/folha.png" />
-    <title>Eucalyptus</title>
-</head>
+    <body>
+        <link rel="stylesheet" href="css/eucalipto-foto.jpg.css">
+        <link rel="stylesheet" href="css/login.css">
+        <main>
+            <div class="login">
+                <form action="/login">
+                    <div class="logar">
+                        <img src="img/Eucalyptus2.png" alt="">
+                        <label>
+                            <label class="baremail">
+                                <span class="email">Email</span>
+                                <input type="text" name="email" id="email" placeholder="Informe seu email">
+                            </label>
 
-<body>
-    <link rel="stylesheet" href="css/eucalipto-foto.jpg.css">
-    <link rel="stylesheet" href="css/login.css">
-    <div class="login">
-        <form action="/login" >
-            <div class="guarda">
-                <label>
-                    <div id="titulo">
-                        <a><img src="img/Eucalyptus.png" alt=""></a>
+                            <label class="barsenha ">
+                                <span class="senha">Senha</span>
+                                <input type="password" name="senha" id="senha" placeholder="Informe seu senha">
+                            </label>
+                            <label class="barconfirmar ">
+                                <span class="comfirmar">Cormfirmar a senha</span>
+                                <input type="password" name="senha" id="senha" placeholder="Informe seu senha">
+                            </label>
+
+                            <div id="esqueceu">
+                                <a href="#" class="barEsqueci">esqueceu a senha ?</a>
+                                <button type="submit">Entrar</button>
+                            </div>
+                        </label>
                     </div>
-
-                    <label class="baremail">
-                        <span class="email">Email</span>
-                        <input type="text" name="email" id="email" placeholder="Informe seu email">
-                    </label>
-
-                    <label class="barsenha ">
-                        <span class="senha">Senha</span>
-                        <input type="password" name="senha" id="senha" placeholder="Informe seu senha">
-                    </label>
-
-                    <div id="esqueceu">
-                        <a href="#" style="color: rgb(0, 0, 0)" class="barEsqueci">esqueceu a senha ?</a>
-                    </div>
-
-                    <div id="entrar">
-                        <a href="/home"><button type="submit">entrar</button></a>
-                    </div>
-                </label>
+                </form>
             </div>
-        </form>
-    </div>
-</body>
+        </main>
+    </body>
 
-</html>
+    </html>

@@ -6,165 +6,93 @@ body {
 }
 
 main {
-    padding: 20px;
-    margin: 100px auto;
-    width: 410px;
-    height: 400px;
-    border-radius: 20px;
-    color: white;
-    box-shadow: 0px 0px 10px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-a img {
-    position: absolute;
+.logar {
+    background-color: rgba(0, 0, 0, 0.20);
+    border-radius: 5px;
+    width: 420px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logar > label {
+    display: flex;
+    flex-direction: column;
+
+}
+
+img {
     width: 376px;
     height: 93px;
-    left: 265px;
-    top: 69px;
+    margin: 0 0 10px 0;
 }
 
-.guarda {
-    background-color:  #000000 transparent;
-}
-
-label {
-    box-sizing: border-box;
-    background-color: gray transparent;
-    position: absolute;
-    width: 281px;
-    height: 318px;
-    left: 258px;
-    top: 81px;
-    border-radius: 7px;
-}
-
-.email {
-    position: absolute;
-    width: 54px;
+.logar label span {
+    display: flex;
+    align-items: center;
+    width: 200px;
     height: 11px;
-    top: -20px;
-
     font-style: italic;
     font-weight: 400;
     font-size: 20px;
     line-height: 15px;
-    display: flex;
-    align-items: center;
-
     color: #ffffff;
+    margin: 10px 0 10px 0;
 }
 
-.baremail {
-    position: absolute;
-    width: 263px;
-    height: 28px;
-    left: 286px;
-    padding: 3px;
-    top: 207px;
-    background: #ffffff;
-    border-radius: 25px;
-}
-
-.barsenha {
-    position: absolute;
-    width: 263px;
-    padding: 3px;
-    height: 28px;
-    left: 290px;
-    top: 285px;
-    background: #FFFFFF;
-    border-radius: 25px;
-}
-
-.senha {
-    position: absolute;
-    width: 54px;
-    height: 11px;
-    top: -20px;
-
-    font-style: italic;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 15px;
-    display: flex;
-    align-items: center;
-
-    color: #ffffff;
+.logar label input {
+    width: 300px;
+    height: 20px;
+    padding: 8px 10px 8px 15px;
+    border-radius: 23px;
+    border: 0;
+    margin: 10px 0 10px 0;
 }
 
 #esqueceu {
-    position: absolute;
-    width: 135px;
-    height: 10px;
-    left: 290px;
-    top: 340px;
-
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 15px;
-
     display: flex;
+    justify-content: space-between;
     align-items: center;
-
-    color: #ffffff;
-}
-
-.esqueceu {
-    position: absolute;
-    width: 83px;
-    height: 18px;
-    left: 304px;
-    top: 324px;
-
-    background: #ffffff;
-
-    border-radius: 8px;
-}
-
-#entrar {
-    position: absolute;
-    width: 41px;
-    height: 21px;
-    left: 467px;
-    top: 340px;
-    padding: 0;
-    border: 0;
-    font-size: 15px;
-
-    color: #000000;
-}
-
-.entrar {
-    position: absolute;
-    width: 48px;
-    height: 18px;
-    left: 417px;
-    top: 325px;
-    border-radius: 15px;
-}
-
-input {
-    background: transparent;
-    padding: 5;
-    border: 0;
-    outline: none;
+    color: white;
     text-decoration: none;
-    color: #000000;
+
+}
+
+#esqueceu a{
+    color: white;
+    text-decoration: none;
+    margin-top: 5px;
     font-size: 18px;
 }
 
 button {
-    background-color: #ffffff;
+    width: 100px;
+    height: 35px;
+    background-color: #DF8233;
+    color: white;
     border: 0;
-    padding: 2PX;
-    border-radius: 23px;
-    width: 80px;
-}
-
-.barEsqueci{
-    background-color: #ffffff;
-    border: 0;
-    padding: 3PX;
-    border-radius: 7px;
-    width: 140px;
+    border-radius: 5px;
+    font-size: 18px;
 }

@@ -30,6 +30,10 @@ const Controller = {
     mostracadastro: (req, res) => {
         res.render('cadastro.ejs')
     },
+
+    addCadastro: (req,res) => {
+        
+    },
     listagemp: (req, res) => {
         res.render('listagemP.ejs')
     },
