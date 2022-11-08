@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 const { sequelize } = require('../database/models');
 const bcrypt = require('bcrypt')
 
-=======
-const {cliente ,sequelize } = require('../database/models');
-const bcrypt = require('bcrypt');
->>>>>>> 8daeef1aaded46992acde6076058916de4377c25
 const Controller = {
     home: async (req, res) => {
         let sql = `SELECT * FROM produtos`;
@@ -38,9 +33,6 @@ const Controller = {
         res.render('cadastro.ejs');
         
     },
-<<<<<<< HEAD
-
-=======
     gravaCadastro: async (req,res) => {
         let sql = `SELECT * FROM clientes`;
         let cliente = await sequelize.query(sql, {type:sequelize.QueryTypes.SELECT});
@@ -65,28 +57,19 @@ const Controller = {
         res.redirect('/home');
     
     },
->>>>>>> 8daeef1aaded46992acde6076058916de4377c25
     addCadastro: async (req,res) => {
         let {nome, email, senha} = req.body;
 
-<<<<<<< HEAD
-        const cli = await Clientes.create(
-=======
 
 
         const c = await clientes.create(
->>>>>>> 8daeef1aaded46992acde6076058916de4377c25
             {
                 nome,
                 email,
                 senha: bcrypt.hashSync(senha, 10)}
         )
 
-<<<<<<< HEAD
-        req.session.cliente = cli;
-=======
         req.session.cliente = c;
->>>>>>> 8daeef1aaded46992acde6076058916de4377c25
 
         res.redirect("/home");
 
