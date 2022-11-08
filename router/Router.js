@@ -15,6 +15,7 @@ router.get('/listagem', Controller.listagemp);
 
 router.get('/carrinho', Controller.mostracarrinho);
 router.post('/carrinho', Controller.addAoCarrinho);
+router.delete('/carrinho/:id',Controller.removerItemDoCarrinho)
 
 router.get('/painel', Controller.painelusuario);
 
