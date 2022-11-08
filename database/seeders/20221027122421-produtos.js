@@ -9,25 +9,25 @@ const produtos = [
   },
   {
     id: 2,
-    imagem: "depositodemadeira.jpg",
+    imagem: "depositodemadeira2.jpg",
     nome:"produto2",
     preco: 2999.99
   },
   {
     id: 3,
-    imagem: "depositodemadeira.jpg",
+    imagem: "depositodemadeira3.jpg",
     nome:"produto3",
     preco: 3999.99
   },
   {
     id: 4,
-    imagem: "depositodemadeira.jpg",
+    imagem: "depositodemadeira4.jpg",
     nome:"produto4",
     preco: 4999.99
   },
   {
     id: 5,
-    imagem: "depositodemadeira.jpg",
+    imagem: "depositodemadeira2.jpg",
     nome:"produto5",
     preco: 5999.99
   },
