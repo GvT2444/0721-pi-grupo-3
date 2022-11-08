@@ -1,5 +1,5 @@
-const { sequelize } = require('../database/models');
-const bcrypt = require('bcrypt')
+const {cliente ,sequelize } = require('../database/models');
+const bcrypt = require('bcrypt');
 
 const Controller = {
     home: async (req, res) => {
@@ -14,7 +14,7 @@ const Controller = {
         let emailDigitado = req.body.email;
         let senhaDigitada = req.body.senha;
 
-        let cli = clientes.find(
+        let cliente = clientes.find(
             c => {
                 if (emailDigitado == c.email && senhaDigitada == c.senha) {
                     return true;
@@ -28,10 +28,8 @@ const Controller = {
         res.render('login.ejs', {clientes});
         
     },
-    mostracadastro:(req, res) => {
-
+    mostraCadastro:(req, res) => {
         res.render('cadastro.ejs');
-        
     },
     gravaCadastro: async (req,res) => {
         let sql = `SELECT * FROM clientes`;
@@ -101,9 +99,8 @@ const Controller = {
         res.render('painelUsuario.ejs')
     },
     produtointerno: async (req, res) => {  
-         res.render('produtoInterno.ejs');
+        res.render('produtoInterno.ejs');
     }
 }
-
 
 module.exports = Controller;
