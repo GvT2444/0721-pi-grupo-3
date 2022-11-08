@@ -5,12 +5,16 @@ main {
 
 section h3 {
     margin-left: 15px;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 section {
     margin: 0;
     margin-bottom: 30px;
+}
+
+a {
+    color: black;
 }
 
 .produtos {
@@ -20,8 +24,8 @@ section {
 
 .produto {
     background-color: rgb(255, 255, 255);
-    width: 215px;
-    height: 265px;
+    width: 250px;
+    max-height: 352px;
     border-radius: 7px;
     margin: 0px;
     padding: 0px;
@@ -29,16 +33,21 @@ section {
 
 .produto img {
     border-radius: 7px 7px 4px 4px ;
-    width: 215px;
+    width: 100%;
+    max-height: 150px;
+    filter: drop-shadow(0px 3px 5px #878788);
 }
 
 .carro button {
-    margin: 0 0 0 150px;
+    margin: 0 0 0 195px;
     padding: 5px;
-    background-color: white;
-    border: 1px black solid;
-    border-radius: 3px;
+    border-radius: 5px;
+    border: 0px;
     width: 50px;
+    height: 30px;
+    background-color: #df7318;
+    filter: drop-shadow(0px 0px 5px #878788);
+    color: white;
 }
 
 .slider {
@@ -77,12 +86,13 @@ section {
 
 .slide img{
     width: 100%;
+    height: 400px;
 }
 
 .manual-navigation{
     position: absolute;
     width: 950px;
-    margin-top: -13px;
+    margin-top: -25px;
     display: flex;
     justify-content: center;
 }
@@ -106,14 +116,12 @@ section {
 #radio1:checked~.first {
     margin-left: 0;
 }
-
 #radio2:checked~.first {
     margin-left: -25%;
 }
 #radio3:checked~.first {
     margin-left: -50%;
 }
-
 #radio4:checked~.first {
     margin-left: -75%;
 }

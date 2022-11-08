@@ -3,33 +3,33 @@
 const produtos = [
   {
     id: 1,
-    imagem: "depositodemadeira.jpg",
-    nome:"produto1",
-    preco: 1999.99
+    imagem: "degadevinho.jpg",
+    nome:"Rack Para Vinho Bamboo Mor",
+    preco: 132.99
   },
   {
     id: 2,
-    imagem: "depositodemadeira.jpg",
-    nome:"produto2",
-    preco: 2999.99
+    imagem: "mesadobravel.jpg",
+    nome:"Jogo De Mesa Dobrável 70x70 C/ 4 Cadeiras Madeira Maciça Bar",
+    preco: 385.99
   },
   {
     id: 3,
-    imagem: "depositodemadeira.jpg",
-    nome:"produto3",
+    imagem: "bancodemadeira.jpg",
+    nome: "Banco Madeira 3 Lugares Lyptus Jatobá 45x150cm Marrom Metalnew",
     preco: 3999.99
   },
   {
     id: 4,
-    imagem: "depositodemadeira.jpg",
-    nome:"produto4",
-    preco: 4999.99
+    imagem: "buffet.jpg",
+    nome:"Buffet Onix Imbuia/Off White Viero",
+    preco: 312.22
   },
   {
     id: 5,
-    imagem: "depositodemadeira.jpg",
-    nome:"produto5",
-    preco: 5999.99
+    imagem: "balancademadeira.jpg",
+    nome:"Banco Balanço de Madeira - Havaí",
+    preco: 5850.00
   },
 ]
 

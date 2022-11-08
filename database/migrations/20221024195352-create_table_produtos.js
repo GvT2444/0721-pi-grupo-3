@@ -15,7 +15,7 @@ module.exports = {
           allowNull: true,
         },
         nome: {
-          type: Sequelize.DataTypes.STRING(45),
+          type: Sequelize.DataTypes.STRING(150),
           allowNull: false,
         },
         preco: {

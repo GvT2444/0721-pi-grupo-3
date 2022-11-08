@@ -12,16 +12,16 @@
                     <input type="radio" name="radio-btn" id="radio3">
                     <input type="radio" name="radio-btn" id="radio4">
                     <div class="slide first">
-                        <img src="/img/depositodemadeira.jpg" width="900" alt="Imagem 1" />
+                        <img src="/img/bancademadeira2.jpg" width="900" alt="Imagem 1" />
                     </div>
                     <div class="slide">
-                        <img src="/img/depositodemadeira2.jpg" alt="Imagem 2" />
+                        <img src="/img/mesadobravel.jpg" alt="Imagem 2" />
                     </div>
                     <div class="slide">
-                        <img src="/img/depositodemadeira3.jpg" alt="Imagem 3" />
+                        <img src="/img/degadevinho.jpg" alt="Imagem 3" />
                     </div>
                     <div class="slide">
-                        <img src="/img/depositodemadeira4.jpg" alt="Imagem 4" />
+                        <img src="/img/balancademadeira.jpg" alt="Imagem 4" />
                     </div>
                 </div>
                 <div class="navigation-auto">
@@ -41,21 +41,23 @@
         </main>
         <section>
             <h3>Veja nossos produtos</h3>
-            <div class="produtos">
-                <% for(let p of produtos){ %>
-                    <div class="produto" id="produto">
-                        <article>
-                            <img src="img/<%= p.imagem%>" alt="<%= p.nome%>">
-                            <h3><%= p.nome%></h3>
-                            <h3>R$ <%= p.preco%></h3>
-                            <form class="carro" action="/carrinho" method="post">
-                                <input type="hidden" name="id" value="<%= p.id %>">
-                                <button type="submit">+Add</button>
-                            </form>
-                        </article>
-                    </div>
-                <% } %>
-            </div>
+                <div class="produtos" href="/produtos">
+                    <% for(let p of produtos){ %>
+                        <div class="produto" id="produto">
+                            <article>
+                                <a href="/produto">
+                                    <img src="img/<%= p.imagem%>" alt="<%= p.nome%>">
+                                </a>
+                                <h3><%= p.nome%></h3>
+                                <h3>R$ <%= p.preco%></h3>
+                                <form class="carro" action="/carrinho" method="post">
+                                    <input type="hidden" name="id" value="<%= p.id %>">
+                                    <button type="submit">+Add</button>
+                                </form>
+                            </article>
+                        </div>
+                    <% } %>
+                </div>
         </section>
         <%-include("partes/footer")%>
         <script src="carrosel.js"></script>

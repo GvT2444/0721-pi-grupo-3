@@ -120,6 +120,23 @@ footer h1{
     margin: 10px 0 15px 0;
 }
 
+footer img {
+    width: 40px;
+    align-items: center;
+}
+
+.insta {
+    width: 40;
+}
+.tt {
+    width: 50px;
+}
+.face {
+    width: 60px;
+}
+
 li{
     margin: 10px 0 10px 0;
+    color: #999;
+    text-decoration: none;
 }
