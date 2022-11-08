@@ -1,5 +1,5 @@
-const {cliente ,sequelize } = require('../database/models');
-const bcrypt = require('bcrypt');
+const { sequelize } = require('../database/models');
+const bcrypt = require('bcrypt')
 
 const Controller = {
     home: async (req, res) => {
@@ -23,51 +23,26 @@ const Controller = {
                 }
             }
         );
-        req.session.cliente = cliente
+       
 
         res.render('login.ejs', {clientes});
         
     },
     mostraCadastro:(req, res) => {
-        res.render('cadastro.ejs');
-    },
-    gravaCadastro: async (req,res) => {
-        let sql = `SELECT * FROM clientes`;
-        let cliente = await sequelize.query(sql, {type:sequelize.QueryTypes.SELECT});
-
-        const {nome, email, senha, confirmacao} = req.body;
-
-        if (senha !== confirmacao) {
-            res.render('error.ejs', {msg: "Senha e confirmação não conferem."})
-            return;
-        }
-
-        const clientes = await clientes.create(
-            {
-                nome,
-                email,
-                senha: bcrypt.hashSync(senha, 10)
-            }
-        )
-
-        req.session.usuario = clientes;
-
-        res.redirect('/home');
-    
+        res.render('cadastro.ejs', {cli:req.session.cliente});
+        
     },
     addCadastro: async (req,res) => {
         let {nome, email, senha} = req.body;
 
-
-
-        const c = await clientes.create(
+        const cli = await Clientes.create(
             {
                 nome,
                 email,
                 senha: bcrypt.hashSync(senha, 10)}
         )
 
-        req.session.cliente = c;
+        req.session.cliente = cli;
 
         res.redirect("/home");
 
@@ -92,6 +67,15 @@ const Controller = {
         console.log(req.session.carrinho);
         res.redirect("/home");
     },
+
+    removerItemDoCarrinho: async(req, res) => {
+        let id = req.params.id
+        req.session.carrinho = req.session.carrinho.filter(p => id != p.id)
+
+        return res.json({id}).status(200)
+        
+    },
+
     finalizacompra: (req, res) => {
         res.render('finalizaCompra.ejs')
     },

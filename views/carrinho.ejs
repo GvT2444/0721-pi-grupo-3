@@ -7,16 +7,15 @@
     <div class="principal">
       <section class="produtos">
         <%for(let p of produtos){ %>
-        <article>
+        <article id="produto_<%= p.id %>">
           <div class="produto">
-            <input type="checkbox" name="selecionar" id="selecionar" />
             <img src="img/<%= p.imagem%>" alt="" />
             <div class="textos">
               <h1><%= p.nome%></h1>
               <p class="preco"><%= p.preco%></p>
             </div>
-            <button id="1" type="submit">
-              <i class="material-icons">delete</i>
+            <button class="lixeira"id="bt_<%= p.id%>" type="button">
+              <i class='material-icons' id= <%= p.id%> >delete</i>
             </button>
           </div>
         </article>
@@ -25,14 +24,15 @@
       <div class="resumo">
         <form>
           <h1 class="pedido">Resumo do pedido</h1>
-          <div class="quantidade"><h3>Produtos: 4</h3></div>
-          <div class="precos"><h3>Preco: </h3><h3></h3></div>
+          <div class="quantidade"><h3>Produtos: </h3></div>
+          <div class="precos"><h3>Preco: </h3><h3>R$1680,99</h3></div>
           <div class="frete"><h3>Valor Frete: R$20,99</h3></div>
           <div class="total"><h3>Total: </h3><h3>R$2710,99</h3></div>
           <button class="comprar">comprar</button>
         </form>
       </div>
     </div>
+    <script src="js/carrinho.js"></script>
   </main>
   <%-include("partes/footer")%>
     </body>
