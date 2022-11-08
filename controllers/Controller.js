@@ -14,7 +14,7 @@ const Controller = {
         let emailDigitado = req.body.email;
         let senhaDigitada = req.body.senha;
 
-        let cli = clientes.find(
+        let cliente = clientes.find(
             c => {
                 if (emailDigitado == c.email && senhaDigitada == c.senha) {
                     return true;
@@ -83,9 +83,8 @@ const Controller = {
         res.render('painelUsuario.ejs')
     },
     produtointerno: async (req, res) => {  
-         res.render('produtoInterno.ejs');
+        res.render('produtoInterno.ejs');
     }
 }
-
 
 module.exports = Controller;
