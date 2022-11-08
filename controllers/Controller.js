@@ -1,4 +1,5 @@
 const {cliente ,sequelize } = require('../database/models');
+const bcrypt = require('bcrypt');
 
 const Controller = {
     home: async (req, res) => {
@@ -32,9 +33,6 @@ const Controller = {
         res.render('cadastro.ejs');
         
     },
-
-
-
     gravaCadastro: async (req,res) => {
         let sql = `SELECT * FROM clientes`;
         let cliente = await sequelize.query(sql, {type:sequelize.QueryTypes.SELECT});
@@ -110,6 +108,5 @@ const Controller = {
         res.render('produtoInterno.ejs')
     }
 }
-
 
 module.exports = Controller;
