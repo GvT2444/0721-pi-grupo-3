@@ -19,7 +19,7 @@ module.exports = {
           allowNull: false,
         },
         senha:{
-          type: Sequelize.DataTypes.STRING(45),
+          type: Sequelize.DataTypes.STRING(64),
           allowNull: false,
         }
       }

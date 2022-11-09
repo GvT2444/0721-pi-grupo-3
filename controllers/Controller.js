@@ -1,4 +1,4 @@
-const { sequelize } = require('../database/models');
+const {Cliente, sequelize } = require('../database/models');
 const bcrypt = require('bcrypt')
 
 const Controller = {
@@ -34,13 +34,18 @@ const Controller = {
     },
     addCadastro: async (req,res) => {
         let {nome, email, senha} = req.body;
-
-        const cli = await Clientes.create(
-            {
-                nome,
-                email,
-                senha: bcrypt.hashSync(senha, 10)}
-        )
+        let cli
+         try {
+          cli = await Cliente.create(
+                {
+                    nome,
+                    email,
+                    senha: bcrypt.hashSync(senha, 10)}
+            )    
+        } catch (error) {
+            console.log(error);
+        }
+        
 
         req.session.cliente = cli;
 
