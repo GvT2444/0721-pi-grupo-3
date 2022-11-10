@@ -23,7 +23,6 @@ const Controller = {
                 }
             }
         );
-       
 
         res.render('login.ejs', {clientes});
         
@@ -64,10 +63,18 @@ const Controller = {
         } else {
             req.session.carrinho = [produto];
         }
+        
         console.log(req.session.carrinho);
         res.redirect("/home");
     },
-
+    showCarrinho: async (req, res)=>{
+        let produtos = req.session.carrinho;
+        let total = 0;
+        for (const p of produtos) {
+            total = total + (p.preco * p.preco);
+        }
+        return res.render('carrinho.ejs',{produto:req.session.carrinho, total});
+    },
     removerItemDoCarrinho: async(req, res) => {
         let id = req.params.id
         req.session.carrinho = req.session.carrinho.filter(p => id != p.id)
