@@ -10,13 +10,13 @@ const produtos = [
   {
     id: 2,
     imagem: "mesadobravel.jpg",
-    nome:"Jogo De Mesa Dobrável 70x70 C/ 4 Cadeiras Madeira Maciça Bar",
+    nome:"Jogo De Mesa Dobrável c/4 Cadeiras",
     preco: 385.99
   },
   {
     id: 3,
     imagem: "bancodemadeira.jpg",
-    nome: "Banco Madeira 3 Lugares Lyptus Jatobá 45x150cm Marrom Metalnew",
+    nome: "Banco Madeira 3 Lugares Lyptus Jatobá ",
     preco: 3999.99
   },
   {

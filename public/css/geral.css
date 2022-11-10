@@ -95,6 +95,7 @@ main {
     display: flex;
     flex-direction: row;
     margin: 0 35px 0 35px;
+    justify-content: center;
 }
 
 
@@ -137,6 +138,5 @@ footer img {
 
 li{
     margin: 10px 0 10px 0;
-    color: #999;
     text-decoration: none;
 }

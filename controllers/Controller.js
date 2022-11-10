@@ -56,29 +56,28 @@ const Controller = {
     },
     mostracarrinho: async (req, res) => {
         let produtos = req.session.carrinho? req.session.carrinho:[]
-        return res.render('carrinho.ejs', { produtos});
+        let frete = 0;
+        let total = 0;
+        for (const p of produtos) {
+            total = total + (p.preco++);
+            frete = frete + (p.frete++);
+        }
+        return res.render('carrinho.ejs', { produtos, total, frete});
     },
     addAoCarrinho: async (req, res) => {
         let { id } = req.body;
         let sql = `SELECT * FROM produtos where id = ${id}`;
         let produtos = await sequelize.query(sql, { type: sequelize.QueryTypes.SELECT });
         let produto = produtos[0];
+        
         if (req.session.carrinho) {
             req.session.carrinho.push(produto);
         } else {
             req.session.carrinho = [produto];
-        }
-        
+        };
+
         console.log(req.session.carrinho);
         res.redirect("/home");
-    },
-    showCarrinho: async (req, res)=>{
-        let produtos = req.session.carrinho;
-        let total = 0;
-        for (const p of produtos) {
-            total = total + (p.preco * p.preco);
-        }
-        return res.render('carrinho.ejs',{produto:req.session.carrinho, total});
     },
     removerItemDoCarrinho: async(req, res) => {
         let id = req.params.id
@@ -87,7 +86,6 @@ const Controller = {
         return res.json({id}).status(200)
         
     },
-
     finalizacompra: (req, res) => {
         res.render('finalizaCompra.ejs')
     },
