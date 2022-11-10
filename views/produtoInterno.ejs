@@ -1,28 +1,27 @@
 <%- include("partes/head") %>
 
     <body>
-        <link rel="stylesheet" href="css/produto.css">
-        <link rel="stylesheet" href="css/geral.css">
+        <link rel="stylesheet" href="/css/produto.css">
+        <link rel="stylesheet" href="/css/geral.css">
         <%- include("partes/header") %>
             <main>
                 <div class="produtointerno">
                 <div class="produtofotos">
                     <ul>
-                        <li><img src="img/madeira2.jpg" alt=""></li>
-                        <li><img src="img/madeira2.jpg" alt=""></li>
-                        <li><img src="img/madeira2.jpg" alt=""></li>
-                        <li><img src="img/madeira2.jpg" alt=""></li>
-                        <li><img src="img/madeira2.jpg" alt=""></li>
-                        <li><img src="img/madeira2.jpg" alt=""></li>
+                        <li><img src="/img/<%= produto.imagem%>" alt=""></li>
+                        <li><img src="/img/<%= produto.imagem%>" alt=""></li>
+                        <li><img src="/img/<%= produto.imagem%>" alt=""></li>
+                        <li><img src="/img/<%= produto.imagem%>" alt=""></li>
+                        <li><img src="/img/<%= produto.imagem%>" alt=""></li>
+                        <li><img src="/img/<%= produto.imagem%>" alt=""></li>
                     </ul>
-                    <img class="imgproduto" src="img/madeira2.jpg" alt="">
+                    <img class="imgproduto" src="/img/<%= produto.imagem%>" alt="">
                 </div>
                 <div class="produto">
+                    
                     <div class="descricao">
-                        <h2 class="nomedaloja">Nome: </h2>
-                        <h4 class="nomedaloja">Madeira de carvalho</h4>
-                        <p class="preco">Preco: R$ 420</p>
-                       
+                        <h2 class="nomedaloja">Nome: <%= produto.nome%></h2>
+                        <p class="preco">Preco: R$ <%= produto.preco%></p>
                     </div>
                     <div class="informacoes">
                         <h1 class="nomedaloja">informacoes</h1>

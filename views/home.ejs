@@ -40,12 +40,31 @@
             </div>
         </main>
         <section>
-            <h3>Veja nossos produtos</h3>
+            <h2>Veja nossos produtos</h2>
                 <div class="produtos" href="/produtos">
+                    <% for(let p of produtos){ %>
+                        <form action="/produto" method="post">
+                            <div class="produto" id="produto">
+                                <article>
+                                    <a href="/produto/<%= p.id%>">
+                                        <img src="img/<%= p.imagem%>" alt="<%= p.nome%>">
+                                    </a>
+                                    <h3><%= p.nome%></h3>
+                                    <h3>R$ <%= p.preco%></h3>
+                                    <form class="carro" action="/carrinho" method="post">
+                                        <input type="hidden" name="id" value="<%= p.id %>">
+                                        <button type="submit">+Add</button>
+                                    </form>
+                                </article>
+                            </div>
+                        </form>
+                    <% } %>
+                </div>
+                <div class="produtos">
                     <% for(let p of produtos){ %>
                         <div class="produto" id="produto">
                             <article>
-                                <a href="/produto">
+                                <a href="/produto/<%= p.id%>">
                                     <img src="img/<%= p.imagem%>" alt="<%= p.nome%>">
                                 </a>
                                 <h3><%= p.nome%></h3>

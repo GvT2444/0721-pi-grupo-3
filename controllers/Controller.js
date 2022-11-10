@@ -24,8 +24,23 @@ const Controller = {
             }
         );
 
-        res.render('login.ejs', {clientes});
+        res.render('login.ejs', {cliente});
         
+    },
+    login: async(req, res) => {
+        let {email, senha} = req.body;
+        let sql = `SELECT * FROM clientes where email="${email}"`;
+        let clientes = await sequelize.query(sql, { type: sequelize.QueryTypes.SELECT });
+        if(clientes.length == 0){
+            return res.send("login ou senha invalido")
+        }
+        let cliente = clientes[0];
+        if(!bcrypt.compareSync(senha, cliente.senha)){
+            return res.send("login ou senha invalido")
+        }
+        req.session.cliente = cliente;
+
+        res.redirect("/home");
     },
     mostraCadastro:(req, res) => {
         res.render('cadastro.ejs', {cli:req.session.cliente});
@@ -92,8 +107,21 @@ const Controller = {
     painelusuario: (req, res) => {
         res.render('painelUsuario.ejs')
     },
-    produtointerno: async (req, res) => {  
-        res.render('produtoInterno.ejs');
+    produtointerno: async (req, res) => { 
+        let id = req.params.id;
+        let sql = `SELECT * FROM produtos where id=${id}`;
+        let produtos = await sequelize.query(sql, { type: sequelize.QueryTypes.SELECT });
+        let produto = produtos[0];
+
+
+        
+        return res.render('produtoInterno.ejs', {produto});
+    },
+    addProdutoInterno: async(req, res)=>{
+        let produtos = req.session.produtos? req.session.produtos:[]
+
+        console.log(req.session.produtos);
+        res.redirect('/produto.ejs', {produtos});
     }
 }
 
